@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: tutorialseguraca
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tutorialseguraca
+    username: postgres
+    password: manager
+  jpa:
+    hibernate:
+      ddl-auto: update # O Hibernate apenas valida; o Flyway faz as alterações
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
